@@ -7,6 +7,8 @@ import com.devsuperior.dscommerce.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ProductService {
 
@@ -14,6 +16,7 @@ public class ProductService {
     private ProductRepository repository;
 
     public ProductDTO findById(Long id){
+        Optional<Product> result = repository.findById(id);
 
     }
 
